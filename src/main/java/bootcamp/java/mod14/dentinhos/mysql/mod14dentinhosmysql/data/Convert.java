@@ -3,7 +3,6 @@ package bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.data;
 import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.data.dto.AppointmentDto;
 import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.data.dto.DoctorDto;
 import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.data.dto.PatientDto;
-import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.data.form.AppointmentBatchForm;
 import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.data.form.AppointmentForm;
 import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.data.form.DoctorForm;
 import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.data.form.PatientForm;
