@@ -63,7 +63,7 @@ public class AppointmentService {
         return Convert.entities(this.repository.findByDoctor_Id(doctorId));
     }
 
-    public List<AppointmentDto> getByStatus(String status) {
+    public List<AppointmentDto> getByStatus(Appointment.Status status) {
         return Convert.entities(this.repository.findByStatus(status));
     }
 }

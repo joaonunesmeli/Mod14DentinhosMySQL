@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
-    public List<Appointment> findByDoctor_Id(long id);
+    List<Appointment> findByDoctor_Id(long id);
 
-    public List<Appointment> findByStatus(String status);
+    List<Appointment> findByStatus(Appointment.Status status);
 }

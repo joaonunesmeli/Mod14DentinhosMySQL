@@ -20,7 +20,7 @@ public class AppointmentController {
         this.service = service;
     }
 
-    @PostMapping("/:doctorId/:patientId")
+    @PostMapping("/{doctorId}/{patientId}")
     public IdDto create(@PathVariable long doctorId, @PathVariable long patientId, @RequestBody AppointmentForm form) {
         return this.service.create(doctorId, patientId, form);
     }
@@ -30,8 +30,8 @@ public class AppointmentController {
         return this.service.getByDoctorId(id);
     }
 
-    @GetMapping("/by_status/{id}")
+    @GetMapping("/by_status/{status}")
     public List<AppointmentDto> getByStatus(@PathVariable Appointment.Status status) {
-        return this.service.getByStatus(status.toString());
+        return this.service.getByStatus(status);
     }
 }
