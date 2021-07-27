@@ -14,12 +14,12 @@ import java.time.LocalDate;
 public class Appointment implements IEntity<Appointment> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private LocalDate date;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Status status;
 
     @ManyToOne

@@ -8,10 +8,10 @@ import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.service.Appointme
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/appointments")
 public class AppointmentController {
     private AppointmentService service;
 
@@ -20,18 +20,19 @@ public class AppointmentController {
         this.service = service;
     }
 
-    @PostMapping("/{doctorId}/{patientId}")
-    public IdDto create(@PathVariable long doctorId, @PathVariable long patientId, @RequestBody AppointmentForm form) {
-        return this.service.create(doctorId, patientId, form);
+    @PostMapping("/appointments")
+    public IdDto create(@Valid @RequestBody AppointmentForm form) {
+        return this.service.create(form.getDoctorId(), form.getPatientId(), form);
     }
 
-    @GetMapping("/by_doctor_id/{id}")
+    @GetMapping("/appointments_by_doctor_id/{id}")
     public List<AppointmentDto> getByDoctorId(@PathVariable long id) {
         return this.service.getByDoctorId(id);
     }
 
-    @GetMapping("/by_status/{status}")
+    @GetMapping("/appointments_by_status/{status}")
     public List<AppointmentDto> getByStatus(@PathVariable Appointment.Status status) {
         return this.service.getByStatus(status);
     }
+
 }

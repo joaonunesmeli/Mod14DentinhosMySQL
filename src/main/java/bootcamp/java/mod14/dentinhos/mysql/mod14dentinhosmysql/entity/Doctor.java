@@ -16,7 +16,7 @@ import javax.persistence.Id;
 public class Doctor implements IEntity<Doctor> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String firstName;

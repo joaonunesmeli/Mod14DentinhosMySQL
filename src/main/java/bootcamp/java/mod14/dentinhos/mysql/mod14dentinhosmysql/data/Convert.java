@@ -21,7 +21,7 @@ public final class Convert {
     }
 
     public static DoctorDto entity(Doctor doc) {
-        return new DoctorDto(doc.getFirstName(), doc.getLastName(), doc.getSpecialty());
+        return new DoctorDto(doc.getId(), doc.getFirstName(), doc.getLastName(), doc.getSpecialty());
     }
 
     public static Patient form(PatientForm p) {
@@ -29,7 +29,7 @@ public final class Convert {
     }
 
     public static PatientDto entity(Patient p) {
-        return new PatientDto(p.getFirstName(), p.getLastName(), p.getGender(), p.getAge());
+        return new PatientDto(p.getId(), p.getFirstName(), p.getLastName(), p.getGender(), p.getAge());
     }
 
     public static Appointment form(Doctor doc, Patient p, AppointmentForm turn) {

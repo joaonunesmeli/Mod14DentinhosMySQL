@@ -3,7 +3,6 @@ package bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.controller;
 import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.data.dto.IdDto;
 import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.data.dto.PatientDto;
 import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.data.form.PatientForm;
-import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.entity.Patient;
 import bootcamp.java.mod14.dentinhos.mysql.mod14dentinhosmysql.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

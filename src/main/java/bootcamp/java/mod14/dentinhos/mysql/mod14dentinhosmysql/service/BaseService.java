@@ -43,7 +43,10 @@ public abstract class BaseService<E extends IEntity, F, D> {
             return this.create(form);
         }
 
+        E received = this.toEntity.apply(form);
         E saved = opt.get();
+
+        saved.set(received);
         this.repository.save(saved);
         return new IdDto(id);
     }
